@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Indique au navigateur que nous utilisons HTML5. -->
+<html lang="fr">
+<head>
+  <!-- Informations de configuration de la page. -->
+  <meta charset="UTF-8">
+  <!-- Permet d'afficher correctement les accents. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Adapte la page à la largeur de l'écran, notamment sur iPhone. -->
+  <meta name="theme-color" content="#101827">
+  <!-- Définit la couleur du thème du navigateur mobile. -->
+  <title>Tilt Ball — Mon mini-jeu</title>
+  <!-- Relie le fichier HTML à la feuille de style. -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Charge le JavaScript après l'analyse du HTML. -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Contient les éléments visibles du jeu. -->
+  <main class="game">
+    <p class="eyebrow">MINI-JEU MOBILE</p>
+    <h1>Tilt Ball</h1>
+    <p class="description">Incline ton téléphone pour guider la bille.</p>
+
+    <!-- Affiche le temps et le niveau actuels. -->
+    <div class="game-info">
+      <div>Temps : <span id="timer">00:00</span></div>
+      <div>Niveau : <span id="level">1</span></div>
+    </div>
+
+    <!-- Terrain dans lequel la bille se déplace. -->
+    <div id="board" class="board" aria-label="Terrain de jeu">
+      <div class="wall wall-one" aria-label="Obstacle 1"></div>
+      <div class="wall wall-two" aria-label="Obstacle 2"></div>
+      <div class="wall wall-three" aria-label="Obstacle 3"></div>
+      <div id="ball" class="ball" aria-label="Bille"></div>
+      <div id="goal" class="goal">ARRIVÉE</div>
+    </div>
+
+    <!-- Messages d'état accessibles aux technologies d'assistance. -->
+    <p id="status" role="status" aria-live="polite">Prêt à jouer ?</p>
+
+    <!-- Boutons de commande du jeu. -->
+    <div class="controls">
+      <button id="start-button" type="button">Démarrer</button>
+      <button id="reset-button" class="secondary" type="button">Recommencer</button>
+    </div>
+
+    <p class="hint">Pose ton téléphone à plat pour commencer.</p>
+    <p class="sensor-note">Sur iPhone, ouvre le jeu dans Safari via une adresse HTTPS et autorise les mouvements si Safari le demande.</p>
+  </main>
+</body>
+</html>
